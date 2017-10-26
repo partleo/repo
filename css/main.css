@@ -76,6 +76,7 @@ textarea {
 header {
     background-image: url(http://via.placeholder.com/960x100/000?text=HeaderBGImage);
     background-position: center;
+    width: 100%;
 }
 
 header h1 {
@@ -88,12 +89,36 @@ header h1 {
     color: #e9e9e9;
 }
 
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+main ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+}
 
+li figure {
+    margin: 0.5rem 0;
+    position: relative;
+}
 
+figure figcaption {
+    position: absolute;
+    top: 4px;
+    background-color: rgba(255,255,255, 0.4);
+    width: 100%;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
 
-
-
+main, aside {
+    width: 100%;
+}
 
 
 
@@ -110,7 +135,12 @@ header h1 {
         max-width: 60em;
         margin: auto;
     }
-
+    main {
+        width: 80%;
+    }
+    aside{
+        width: 20%;
+    }
 }
 
 @media print,
